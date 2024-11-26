@@ -1,7 +1,7 @@
 //Conteúdo
 const content = [
   [
-    "JavaScriptJavaScript é uma linguagem de programação que permite adicionar interatividade e lógica a páginas web e aplicações. Ela é conhecida por sua capacidade de manipular elementos HTML, responder a eventos do usuário, e realizar operações assíncronas.",
+    "JavaScript é uma linguagem de programação que permite adicionar interatividade e lógica a páginas web e aplicações. Ela é conhecida por sua capacidade de manipular elementos HTML, responder a eventos do usuário, e realizar operações assíncronas.",
     "O termo Vanilla JavaScript se refere ao JavaScript 'puro', ou seja, sem o uso de bibliotecas ou frameworks externos como React, Angular ou jQuery. É a base sobre a qual essas ferramentas são construídas.",
 
   ],
@@ -53,11 +53,15 @@ const tabContent = document.getElementById("tab-content");
 
 //Função para gerar o conteúdo das tabs
 function displayContent(items) {
-  let listContent = "";
+  let listContent = ``;
+
   items.forEach(item => listContent += `<li>${item}</li>`)
-  const list = document.createElement("ul");
+ 
   tabContent.innerHTML = ""; // Limpa o conteúdo existente
+  
+  const list = document.createElement("ul");
   list.innerHTML = listContent; // Insere um novo conteúdo
+  
   tabContent.append(list);
 }
 
@@ -71,12 +75,13 @@ function highlightButton(btn) {
 
 function handleClick(event) {
   event.preventDefault(); // Para evitar que a página seja recarregada ao clicar no botão
-  const btnId = event.target.id; // Puxa o id do botão onde houve o evento click (lembrando: id no tipo texto)
   highlightButton(event.target); // Aplica classe css para realçar o botão, isto é, "fazer o highlight"
+  const btnId = event.target.id; // Puxa o id do botão onde houve o evento click (lembrando: id no tipo texto)
   const btnNumberId = buttons.find(button => button.idName === btnId).id // Retorna o id numérico referente ao botão clicado no array buttons
-  displayContent(content[btnNumberId]); // Vai refrir apontar para o indice do array content equivalente ao button, isto é, vai gerar o conteúdo equivalente ao botão clicado. 
+  displayContent(content[btnNumberId]); // Vai apontar para o indice do array content equivalente ao button, isto é, vai gerar o conteúdo equivalente ao botão clicado. 
 
 }
+
 
 displayContent(content[0]);
 
