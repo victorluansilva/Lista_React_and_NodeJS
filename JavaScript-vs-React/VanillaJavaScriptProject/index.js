@@ -21,6 +21,28 @@ const content = [
     "Frameworks populares para desenvolvimento front-end: React, Vue e Angular, por exemplo",
     "Node.js: Ambiente de execução JavaScript para backend",
     "jQuery: Biblioteca para simplificar a manipulação do DOM"
+  ],
+  [
+    `Exemplo da sintaxe de método em arrow function:
+    <pre>
+      <code>
+      const exemplo = () =>{
+        return 'this is JavaScript'
+        }
+        </code>
+    </pre>
+    `,
+
+    ` Exemplo de sintaxe de criação de um objeto:
+    <pre>
+      <code>
+        const Pessoa = {
+          nome: 'Victor',
+          sobrenome: 'Silva'
+        }
+      </code>
+    </pre>
+  `
   ]
 ];
 //Get em array dos botões
@@ -44,6 +66,11 @@ const buttons = [
     id: 3,
     idName: 'btn-resources',
     get: document.getElementById("btn-resources")
+  },
+  {
+    id: 4,
+    idName: 'btn-examples',
+    get: document.getElementById("btn-examples")
   }
 ]
 
