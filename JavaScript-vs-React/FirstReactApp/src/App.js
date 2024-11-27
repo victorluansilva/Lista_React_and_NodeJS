@@ -58,6 +58,13 @@ export default function App() {
           >
             Assunto Relacionado e Referência
           </button>
+          <button
+            className={activeContentIndex === 3 ? "active" : ""}
+            onClick={() => setActiveContentIndex(3)}
+          >
+            Diferenças entre React e Vanilla JS
+          </button>
+      
         </menu>
         <div id="tab-content">
           <ul>
