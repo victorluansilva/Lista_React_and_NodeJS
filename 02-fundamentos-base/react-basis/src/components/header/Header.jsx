@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 
+import athomReact  from '../../assets/athom-react.png'
 import './Header.css'
 
 const randomWords = () =>{
@@ -11,6 +12,7 @@ const randomWords = () =>{
 const Header = () => {
     return (
       <header>
+        <img src={athomReact} alt="" />
         <h1>Fundamentos do React</h1>
         <p>Iremos aplicar aqui {randomWords()} práticos e resumidos do React.</p>
       </header>
