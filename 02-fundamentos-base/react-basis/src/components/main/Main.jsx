@@ -1,4 +1,5 @@
 import './Main.css';
+import MeuObjetivoComReact from './MeuObjetivoComReact/MeuObjetivoComReact';
 
 //Construir um componente do zero chamado de MeuObjetivoComReact
 // Na pasta dentro de Main que deve ser exportado por padrão (default)
@@ -10,7 +11,7 @@ import './Main.css';
 const Main = () => {
     return (
       <main>
-        <p>Um breve resumo aqui!</p>
+        <MeuObjetivoComReact />
       </main>
     );
   };
