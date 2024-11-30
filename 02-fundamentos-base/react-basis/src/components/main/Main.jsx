@@ -1,17 +1,38 @@
+/* eslint-disable no-unused-vars */
 import './Main.css';
 import MeuObjetivoComReact from './MeuObjetivoComReact/MeuObjetivoComReact';
 
-//Construir um componente do zero chamado de MeuObjetivoComReact
-// Na pasta dentro de Main que deve ser exportado por padrão (default)
-// E importado no Main.js
-// No componente você deve listar 
-// 3 objetivos que você almeja com o aprendizado de React
-// Utilize o .map tal como realizado no primeiro projeto de exemplo de React
+const conceitosChaves = [
+  {
+    id: 1,
+    titulo: 'Componentes',
+    conceitos: [
+      'Componentes são pequenos blocos de código que podem ser reutilizados em vários lugares da interface.',
+      'Os componentes são imutáveis, ou seja, não podem ser alterados diretamente.',
+      'Os componentes podem ser passados props para outros componentes.',
+      'Os componentes podem ser estilizados usando CSS ou CSS-in-JS.',
+    ]
+  }
+];
+
+  const CoreConcept = ({titulo, conceitos}) => {
+  return (
+    <>
+    <h2>{titulo}</h2>
+    <ul>
+      <li>{conceitos}</li>
+    </ul>
+    </>
+  )
+};
 
 const Main = () => {
     return (
       <main>
         <MeuObjetivoComReact />
+        <section id='core-concepts'>
+        <CoreConcept titulo={conceitosChaves[0].titulo}  conceitos={conceitosChaves[0].conceitos}/>
+        </section>
       </main>
     );
   };
