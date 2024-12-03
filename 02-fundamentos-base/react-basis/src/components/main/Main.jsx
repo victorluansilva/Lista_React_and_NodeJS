@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import './Main.css';
-import MeuObjetivoComReact from './MeuObjetivoComReact/MeuObjetivoComReact';
+import CoreConcept from "../coreconcetp/CoreConcept";
+import "./Main.css";
+import MeuObjetivoComReact from "./MeuObjetivoComReact/MeuObjetivoComReact";
 
 // Atividade:
 // 1- Passe o componente 'CoreConcept' para um novo arquivo e pasta tendo como base o que foi ensinado sobre estruturação de componentes e arquivos no React.
@@ -13,56 +14,54 @@ import MeuObjetivoComReact from './MeuObjetivoComReact/MeuObjetivoComReact';
 const conceitosChaves = [
   {
     id: 1,
-    titulo: 'Componentes',
+    titulo: "Componentes",
     conceitos: [
-      'Componentes são pequenos blocos de código que podem ser reutilizados em vários lugares da interface.',
-      'Os componentes são imutáveis, ou seja, não podem ser alterados diretamente.',
-      'Os componentes podem ser passados props para outros componentes.',
-      'Os componentes podem ser estilizados usando CSS ou CSS-in-JS.',
-    ]
-  },
-  {
-    id: 2,
-    titulo: 'Estados e eventos',
-    conceitos: [
-      'Os estados são dados que são mantidos pelo componente.',
-      'Os estados são imutáveis, ou seja, não podem ser alterados diretamente.',
-      'Os estados são usados para controlar o estado do componente.',
-      'Os estados são usados para gerenciar o estado do componente, além de lidar com eventos.',
+      "Componentes são pequenos blocos de código que podem ser reutilizados em vários lugares da interface.",
+      "Os componentes são imutáveis, ou seja, não podem ser alterados diretamente.",
+      "Os componentes podem ser passados props para outros componentes.",
+      "Os componentes podem ser estilizados usando CSS ou CSS-in-JS.",
     ],
   },
   {
-    id:3,
-    titulo: 'Props',
+    id: 2,
+    titulo: "Estados e eventos",
     conceitos: [
-      'Props são dados que são passados de um componente pai para um componente filho.',
-      'Os props são imutáveis, ou seja, não podem ser alterados diretamente.',
-      'Os props são usados para passar dados entre componentes.',
-      'Os props são usados para passar dados entre componentes, além de lidar com eventos.',
-    ]
-  }
+      "Os estados são dados que são mantidos pelo componente.",
+      "Os estados são imutáveis, ou seja, não podem ser alterados diretamente.",
+      "Os estados são usados para controlar o estado do componente.",
+      "Os estados são usados para gerenciar o estado do componente, além de lidar com eventos.",
+    ],
+  },
+  {
+    id: 3,
+    titulo: "Props",
+    conceitos: [
+      "Props são dados que são passados de um componente pai para um componente filho.",
+      "Os props são imutáveis, ou seja, não podem ser alterados diretamente.",
+      "Os props são usados para passar dados entre componentes.",
+      "Os props são usados para passar dados entre componentes, além de lidar com eventos.",
+    ],
+  },
 ];
 
-  const CoreConcept = ({titulo, conceitos}) => {
+const Main = () => {
   return (
-    <>
-    <h2>{titulo}</h2>
-    <ul>
-      <li>{conceitos}</li>
-    </ul>
-    </>
-  )
+    <main>
+      <MeuObjetivoComReact />
+      <section id="core-concepts">
+        {conceitosChaves.map((conceitoChave, key) => {
+          return (
+            <CoreConcept
+              key={key}
+              id={key}
+              titulo={conceitoChave.titulo}
+              conceitos={conceitoChave.conceitos}
+            />
+          );
+        })}
+      </section>
+    </main>
+  );
 };
 
-const Main = () => {
-    return (
-      <main>
-        <MeuObjetivoComReact />
-        <section id='core-concepts'>
-        <CoreConcept titulo={conceitosChaves[0].titulo}  conceitos={conceitosChaves[0].conceitos}/>
-        </section>
-      </main>
-    );
-  };
-
-  export default Main;
+export default Main;

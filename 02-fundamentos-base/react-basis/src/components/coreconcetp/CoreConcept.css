@@ -1,0 +1,14 @@
+#core-concepts{
+
+    width: 32rem !important;
+}
+
+.concepts{
+    margin: 10px;
+}
+
+#core-concepts .concept li{
+    text-align: left;
+    width: 28rem;
+    list-style:disc;
+}
