@@ -54,6 +54,10 @@ main {
 }
 
 #core-concepts {
+  display: flex;
+  width: fit-content;
+  width: fit-content;
+  margin: 10px auto;
   padding: 2rem;
   border-radius: 6px;
   background-color: #140524;
@@ -72,13 +76,13 @@ main h2 {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content:flex-start;
 }
 
 #core-concepts li {
-  width: 10rem;
+  /* width: 10rem; */
   text-align: center;
 }
 
