@@ -12,12 +12,26 @@ import {conceitosChaves} from "../../data.js"
 // Importe as imagens no arquivo data.js lembrando de apontá-los no atributo do objetos em conceitosChaves
 // Utilize conditional rendering para renderizar imagens somente se houver um valor de caminho no arquivo.
 
+const handleConceptCick = (e) => {
+  alert(e.target.innerText);
+  console.log(e.target);
+}
 const Main = () => {
   return (
     <main>
       <MeuObjetivoComReact />
       <section id="core-concepts">
-        {/* {conceitosChaves.map((conceito, key) => {
+        {conceitosChaves.map((conceitoChave, key) => {
+          return <CoreConcept key={key} {...conceitoChave} action={handleConceptCick}/>;
+        })}
+      </section>
+    </main>
+  );
+};
+
+export default Main;
+
+       {/* {conceitosChaves.map((conceito, key) => {
           return (
             <CoreConcept
               key={key}
@@ -27,12 +41,3 @@ const Main = () => {
             />
           );
         })} */}
-        {conceitosChaves.map((conceitoChave, key) => {
-          return <CoreConcept key={key} {...conceitoChave} />;
-        })}
-      </section>
-    </main>
-  );
-};
-
-export default Main;
