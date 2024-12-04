@@ -7,14 +7,14 @@ import MeuObjetivoComReact from "./MeuObjetivoComReact/MeuObjetivoComReact";
 import {conceitosChaves} from "../../data.js"
 
 // Atividade 4 - Destructuring e Spread Operators em Props e Renderização Condicional 
-// Adapte CoreConcept para receber uma imagem que deve ser centralizada no meio abaixo ou acima (sua escolha) do título de CoreConcept.
-// Realize as estilizações necessárias
-// Importe as imagens no arquivo data.js lembrando de apontá-los no atributo do objetos em conceitosChaves
-// Utilize conditional rendering para renderizar imagens somente se houver um valor de caminho no arquivo.
+// Adapte CoreConcept para receber uma imagem que deve ser centralizada e posicionada abaixo de seu título;
+// Realize as estilizações necessárias para que a imagem fique ao centro, tenha largura do tamanho CoreConcept, porém, com 15px de magem nas laterais;
+// Importe as imagens no arquivo data.js lembrando de criar um novo atributo imgSrc, que refere à imagem importada, para cada objeto em conceitosChaves
+// Utilize conditional rendering para renderizar imagens se houver um valor de caminho no atributo imgSrc.
 
 const handleConceptCick = (e) => {
+  //Método para lidar com o click que "joga" um alert com o texto do elemento target/"alvo" clicado  
   alert(e.target.innerText);
-  console.log(e.target);
 }
 const Main = () => {
   return (
@@ -22,6 +22,7 @@ const Main = () => {
       <MeuObjetivoComReact />
       <section id="core-concepts">
         {conceitosChaves.map((conceitoChave, key) => {
+          // Exemplo de props via 'Spread Operators ...conceitoChave e exemplo de Handler de click no componente CoreConcept '
           return <CoreConcept key={key} {...conceitoChave} action={handleConceptCick}/>;
         })}
       </section>
@@ -30,14 +31,3 @@ const Main = () => {
 };
 
 export default Main;
-
-       {/* {conceitosChaves.map((conceito, key) => {
-          return (
-            <CoreConcept
-              key={key}
-              id={conceito.id}
-              titulo={conceito.titulo}
-              conceitos={conceito.conceitos}
-            />
-          );
-        })} */}
