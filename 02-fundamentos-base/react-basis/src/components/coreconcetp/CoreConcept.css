@@ -10,3 +10,8 @@
     font-size: small !important;;
 }
 
+#core-concepts .concepts img{
+    width: 20rem;
+    height: auto;
+    margin: 1rem 0;
+}
