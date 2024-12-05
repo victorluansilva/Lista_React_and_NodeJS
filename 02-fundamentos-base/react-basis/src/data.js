@@ -1,41 +1,46 @@
-import imgComponent from './assets/atividade/react-component.webp'
-import imgEstadoEvento from './assets/atividade/event-usestate.webp'
-import imgProps from './assets/atividade/props-react.webp'
+import imgComponent from './assets/components.png'
+import imgJSX from './assets/jsx-ui.png'
+import imgProps from './assets/config.png'
+import imgState from './assets/state-mgmt.png'
 
 export const conceitosChaves = [
-    {
-      id: 1,
-      titulo: "Componentes",
-      imgSrc: imgComponent,
-      conceitos: [
-        "Componentes são pequenos blocos de código que podem ser reutilizados em vários lugares da interface.",
-        "Os componentes são imutáveis, ou seja, não podem ser alterados diretamente.",
-        "Os componentes podem ser passados props para outros componentes.",
-        "Os componentes podem ser estilizados usando CSS ou CSS-in-JS.",
-      ],
-    },
-    {
-      id: 2,
-      titulo: "Estados e eventos",
-      imgSrc: imgEstadoEvento,
-      conceitos: [
-        "Os estados são dados que são mantidos pelo componente.",
-        "Os estados são imutáveis, ou seja, não podem ser alterados diretamente.",
-        "Os estados são usados para controlar o estado do componente.",
-        "Os estados são usados para gerenciar o estado do componente, além de lidar com eventos.",
-      ],
-    },
-    {
-      id: 3,
-      titulo: "Props",
-      imgSrc: imgProps,
-      conceitos: [
-        "Props são dados que são passados de um componente pai para um componente filho.",
-        "Os props são imutáveis, ou seja, não podem ser alterados diretamente.",
-        "Os props são usados para passar dados entre componentes.",
-        "Os props são usados para passar dados entre componentes, além de lidar com eventos.",
-      ],
-    },
-  ];
+  {
+    id: 1,
+    titulo: "Componentes",
+    imgSrc: imgComponent,
+    conceitos: [
+      "Blocos fundamentais para a construção de IU. Constrói uma interface de usuário web por meio da combinação de multiplos componentes."
+    ],
+  },
+  {
+    id: 2,
+    titulo: "JSX",
+    imgSrc: imgJSX,
+    conceitos: [
+      "Retorna o código HTML (potencialmente dinâmico) para definir a tag real que será renderizada no Browser."
+    ],
+  },
+  {
+    id: 3,
+    titulo: "Props",
+    imgSrc: imgProps,
+    conceitos: [
+      "Torna os componentes configuráveis (e, portanto, reutilizáveis) passando dados de entrada para eles.",
+    ],
+  },
+  {
+    id: 4,
+    titulo: "State",
+    imgSrc: imgState,
+    conceitos: [
+      "Dados gerenciados pelo React que, quando alterados, fazem o componente ser renderizado novamente e, assim, atualizando a interface de usuário",
+    ],
+  },
+];
 
-  
+
+export const objetivos = [
+  "Criar aplicações otimizadas e de reação rápidas",
+  "Criar webaps belos e dinâmicos",
+  "Criar meu próprio website",
+];

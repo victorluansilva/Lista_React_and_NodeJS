@@ -9,11 +9,10 @@ const randomWords = () => {
 };
 
 const Header = () => {
-  const imgSrc = null //athomReact;
+  const imgSrc = athomReact;
 
   return (
     <header>
-      {/* {imgSrc ? (<img src={imgSrc} alt="" />): (<p>Imagem não encontrada</p>)} */}
       {imgSrc && <img src={imgSrc}/>}
       <h1>Fundamentos do React</h1>
       <p>Iremos aplicar aqui {randomWords()} práticos e resumidos do React.</p>
