@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import "./App.css";
 import Header from "./components/header/Header";
-import Main from "./components/main/Main";
+import MainContent from "./components/main/MainContent";
 import { useState } from "react";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       {isLoggedIn ? (
         <>
           <Header />
-          <Main />
+          <MainContent />
         </>
       ) : (
         <>
