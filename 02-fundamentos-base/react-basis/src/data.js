@@ -11,6 +11,11 @@ export const conceitosChaves = [
     conceitos: [
       "Blocos fundamentais para a construção de IU. Constrói uma interface de usuário web por meio da combinação de multiplos componentes."
     ],
+    exemplo: `
+    function Welcome() {
+      return <h1>Hello, World!</h1>;
+    }
+    `
   },
   {
     id: 2,
@@ -19,6 +24,12 @@ export const conceitosChaves = [
     conceitos: [
       "Retorna o código HTML (potencialmente dinâmico) para definir a tag real que será renderizada no Browser."
     ],
+    exemplo: `
+    <div>
+      <h1>Welcome {userName}</h1>
+      <p>Time to learn React!</p>
+    </div>
+    `
   },
   {
     id: 3,
@@ -27,6 +38,11 @@ export const conceitosChaves = [
     conceitos: [
       "Torna os componentes configuráveis (e, portanto, reutilizáveis) passando dados de entrada para eles.",
     ],
+    exemplo: `
+    function Welcome(props) {
+      return <h1>Hello, {props.name}</h1>;
+    }
+  `
   },
   {
     id: 4,
@@ -35,6 +51,22 @@ export const conceitosChaves = [
     conceitos: [
       "Dados gerenciados pelo React que, quando alterados, fazem o componente ser renderizado novamente e, assim, atualizando a interface de usuário",
     ],
+    exemplo: `
+    function Counter() {
+      const [isVisible, setIsVisible] = useState(false);
+
+      function handleClick() {
+        setIsVisible(true);
+      }
+
+      return (
+        <div>
+          <button onClick={handleClick}>Show Details</button>
+          {isVisible && <p>Amazing details!</p>}
+        </div>
+      );
+    }`,
+
   },
 ];
 
