@@ -3,25 +3,49 @@
 import CoreConcept from "../coreconcetp/CoreConcept.jsx";
 import "./MainContent.css";
 import MeuObjetivoComReact from "./MeuObjetivoComReact/MeuObjetivoComReact.jsx";
+import { useState } from "react";
+import { conceitosChaves } from "../../data.js"
+import TabButton from "../tabbutton/TabButton.jsx";
 
-import {conceitosChaves} from "../../data.js"
-
-const handleConceptCick = (e) => {
-  //Método para lidar com o click que "joga" um alert com o texto do elemento target/"alvo" clicado  
-  alert(e.target.innerText);
-}
 const MainContent = () => {
+
+  const [tabContent, setTabContent] = useState(1);
+
+  const handleConceptClick = (e) => {
+    alert(e.target.innerText);
+  }
+
+  const handleTabButton = (id) => {
+    //console.log(e.target.innerText);
+    setTabContent(id);
+  }
+
   return (
     <main>
       <MeuObjetivoComReact />
       <section id="core-concepts">
-        {conceitosChaves.map((conceitoChave, key) => {
+        {conceitosChaves && conceitosChaves.map((conceitoChave, key) => {
           // Exemplo de props via 'Spread Operators ...conceitoChave e exemplo de Handler de click no componente CoreConcept '
-          return <CoreConcept key={key} {...conceitoChave} action={handleConceptCick}/>;
+          return <CoreConcept key={key} {...conceitoChave} action={handleConceptClick} />;
         })}
       </section>
-      <section>
-        
+      <section id="examples">
+        <h2>Exemplos</h2>
+        <menu>
+          {/* <TabButton titulo='Botão'  /> */}
+          {conceitosChaves && conceitosChaves.map((conceitoChave, key) => {
+            return <TabButton key={key} onClick={() => { handleTabButton(key) }}>{conceitoChave.titulo}</TabButton>
+          })}
+        </menu>
+        <div id="tab-content">
+          <h3>Exemplo de código em {conceitosChaves[tabContent].titulo}</h3>
+          <p></p>
+          <pre>
+            <code>
+              {conceitosChaves[tabContent].exemplo}
+            </code>
+          </pre>
+        </div>
       </section>
     </main>
   );
