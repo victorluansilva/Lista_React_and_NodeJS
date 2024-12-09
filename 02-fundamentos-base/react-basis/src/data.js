@@ -2,8 +2,10 @@ import imgComponent from './assets/components.png'
 import imgJSX from './assets/jsx-ui.png'
 import imgProps from './assets/config.png'
 import imgState from './assets/state-mgmt.png'
-
-
+import imgEvents from './assets/events-icon.png'
+import imgHooks from './assets/hooks-icon.png'
+import imgContext from './assets/context-icon.png'
+import imgEffects from './assets/effects-icon.png'
 
 export const conceitosChaves = [
   [
@@ -72,10 +74,11 @@ export const conceitosChaves = [
 
     },
   ],
-  [{
+  [
+    {
     id: 4,
     titulo: "Eventos",
-    imgSrc: null,
+    imgSrc: imgEvents,
     conceitos: [
       "Permitem capturar ações do usuário, como cliques, teclas pressionadas, movimentos do mouse, etc., e responder dinamicamente a essas ações."
     ],
@@ -96,7 +99,7 @@ export const conceitosChaves = [
   {
     id: 5,
     titulo: "Hooks",
-    imgSrc: null,
+    imgSrc: imgHooks,
     conceitos: [
       "Funções especiais do React que permitem usar recursos como estado e ciclo de vida em componentes funcionais."
     ],
@@ -118,7 +121,7 @@ export const conceitosChaves = [
   {
     id: 6,
     titulo: "Context",
-    imgSrc: null,
+    imgSrc: imgContext,
     conceitos: [
       "Proporciona uma forma de passar dados como tema, idioma ou autenticação através de uma árvore de componentes sem precisar propagar manualmente via props."
     ],
@@ -150,7 +153,7 @@ export const conceitosChaves = [
   {
     id: 7,
     titulo: "Efeitos colaterais",
-    imgSrc: null,
+    imgSrc: imgEffects,
     conceitos: [
       "Gerenciam ações que devem ser executadas como consequência de mudanças no estado ou nas props de um componente."
     ],
